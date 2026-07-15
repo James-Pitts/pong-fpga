@@ -1,0 +1,22 @@
+# Quartus generated junk
+db/
+incremental_db/
+output_files/
+*.qws
+*.rpt
+*.summary
+*.smsg
+*.done
+*.jdi
+*.pin
+*.sof
+*.pof
+
+# ModelSim
+work/
+*.wlf
+transcript
+
+# OS junk
+.DS_Store
+Thumbs.db
