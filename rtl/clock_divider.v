@@ -1,8 +1,6 @@
-// ============================================================
 // Module: clock_divider
 // Purpose: Takes the board's 50 MHz clock and produces a
 //          25 MHz clock for driving VGA timing.
-// ============================================================
 
 module clock_divider (
     input  wire clk,       // 50 MHz clock coming from the board
