@@ -1,4 +1,3 @@
-// =============================================================
 // Module: rgb_mux
 // Purpose: Combinational-then-registered pixel painter. For the
 //          pixel currently addressed by pixel_x/pixel_y, decides
@@ -14,7 +13,6 @@
 //   - COLOR_WIDTH defaults to 4 bits/channel, a guess pending
 //     confirmation of the real board's VGA DAC width once
 //     hardware is available.
-// =============================================================
 module rgb_mux #(
     parameter COLOR_WIDTH    = 4,
     parameter BALL_SIZE      = 8,

@@ -1,4 +1,3 @@
-// =============================================================
 // Module: pong_top
 // Purpose: Top-level wiring only -- no new logic. Instantiates
 //          every previously-verified module and connects them.
@@ -9,7 +8,6 @@
 //   These are DIFFERENT events despite the shared name upstream.
 //   Renamed here as paddle_hit_left/right and wall_hit_left/right
 //   respectively to keep them visually distinct at every wire.
-// =============================================================
 module pong_top (
     input  wire        clk_50mhz,
     input  wire        reset,
