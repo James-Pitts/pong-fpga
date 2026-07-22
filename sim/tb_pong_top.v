@@ -152,7 +152,11 @@ module tb_pong_top;
         force dut.u_ball_control.ball_y = 10'd236;
         force dut.paddle_y_right        = 10'd236;
         force dut.u_ball_control.x_dir  = 1'b1;
-        repeat (3) @(negedge dut.clk_25mhz);
+
+        @(negedge dut.clk_25mhz);   //let forced setup value settle one cycle
+        release dut.u_ball_control.x_dir;   // release before checking
+
+        repeat (2) @(negedge dut.clk_25mhz);
         if (!saw_paddle_bounce) begin
             $display("FAIL: paddle_hit_right never reached ball_control (collision wiring broken)");
             errors = errors + 1;
@@ -164,7 +168,6 @@ module tb_pong_top;
         release dut.u_ball_control.ball_x;
         release dut.u_ball_control.ball_y;
         release dut.paddle_y_right;
-        release dut.u_ball_control.x_dir;
         repeat (2) @(negedge dut.clk_25mhz);
 
         // ---- Check 4: ball_control.v -> score_fsm.v -> ball_control.v wiring ----

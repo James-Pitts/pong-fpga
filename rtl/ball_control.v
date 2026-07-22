@@ -65,7 +65,7 @@ module ball_control #(
             ball_y            <= START_Y[9:0];
             x_dir             <= 1'b1;
             y_dir             <= 1'b1;
-            vsync_prev        <= 1'b0;
+            vsync_prev        <= 1'b1;
             at_left_prev      <= 1'b0;
             at_right_prev     <= 1'b0;
             last_hit_was_left <= 1'b0;

@@ -27,7 +27,7 @@ module paddle_control #(
 
     always @(posedge clk) begin
         if (reset)
-            vsync_prev <= 1'b0;
+            vsync_prev <= 1'b1;
         else
             vsync_prev <= vsync;
     end
